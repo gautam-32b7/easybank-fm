@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  --color-dark-blue: hsl(233, 26%, 24%);
+  --color-lime-green: hsl(136, 65%, 51%);
+  --color-bright-cyan: hsl(192, 70%, 51%);
+
+  --color-grayish-blue: hsl(233, 8%, 62%);
+  --color-light-grayish-blue: hsl(220, 16%, 96%);
+  --color-light-gray: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  font-family: "Public Sans", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* HEADER SECTION */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4.8rem;
+  position: relative;
+}
+
+.primary-links {
+  display: flex;
+  gap: 3.6rem;
+}
+
+.primary-links a {
+  color: var(--color-grayish-blue);
+  display: inline-block;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.primary-links a:hover,
+.primary-links a:active {
+  color: var(--color-lime-green);
+}
+
+.btn-mobile-nav {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav[name="close"] {
+  display: none;
+}
+
+/* HERO SECTION */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: url("../images/bg-intro-desktop.svg") no-repeat 54rem -25.4rem;
+}
+
+.hero-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding: 19.2rem 4.8rem;
+}
+
+.hero-text h1 {
+  color: var(--color-dark-blue);
+  font-size: 6.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.hero-text p {
+  color: var(--color-grayish-blue);
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.hero-text a:link,
+.hero-text a:visited,
+.cta {
+  color: var(--color-white);
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.4rem 2.8rem;
+  border-radius: 3.2rem;
+  background: linear-gradient(
+    90deg,
+    var(--color-lime-green),
+    var(--color-bright-cyan)
+  );
+  transition: all 0.3s ease;
+}
+
+.hero-text a:hover,
+.hero-text a:active,
+.cta:hover {
+  background: linear-gradient(90deg, #42d769, #67cbe4);
+}
+
+/* CHOOSE SECTION */
+.choose {
+  background-color: var(--color-light-gray);
+  padding: 6.4rem 4.8rem;
+}
+
+.choose h2 {
+  color: var(--color-dark-blue);
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.choose p {
+  color: var(--color-grayish-blue);
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 6.4rem;
+}
+
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem;
+}
+
+.facilities-card img {
+  margin-bottom: 2.4rem;
+}
+
+.facilities-card h3 {
+  color: var(--color-dark-blue);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.facilities-card p {
+  font-size: 1.8rem;
+}
+
+/* LATEST ARTICLES */
+.latest-articles {
+  padding: 6.4rem 4.8rem;
+}
+
+.latest-articles h2 {
+  color: var(--color-dark-blue);
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.articles-cards {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.articles-card {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.articles-card img {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 3.2rem;
+}
+
+.articles-card p {
+  color: var(--color-grayish-blue);
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.articles-card .author {
+  font-size: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.articles-card h3 {
+  color: var(--color-dark-blue);
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 6.4rem 4.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+  color: var(--color-white);
+  display: inline-block;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+  color: var(--color-lime-green);
+}
+
+.footer-cta p {
+  color: var(--color-grayish-blue);
+  font-size: 1.8rem;
+  padding: 2.4rem 0;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+.fa-brands {
+  color: #fff;
+  font-size: 2.8rem;
+  transition: all 0.3s ease;
+}
+
+.fa-brands:hover {
+  color: var(--color-lime-green);
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 2.4rem 0;
+}
